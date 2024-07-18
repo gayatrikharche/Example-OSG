@@ -43,20 +43,3 @@ The HTCondor submit file configures the job submission process and includes:
 4. **File Transfers:** Manages the transfer of necessary files (e.g., Python script, dataset) to the compute node.
 5. **Resource Requests:** Requests computational resources such as CPUs, GPUs, memory, and disk space.
 6. **Job Execution:** Ensures that the job is executed with the specified resources and that all necessary files are available on the compute node.
-
----
-
-This README provides a comprehensive overview of Method 1, detailing each step in the process from data acquisition to job execution and monitoring. Adjust and expand upon this entry as needed to fit specific requirements or additional details.
-Extract Dataset: Decompresses the CIFAR-10 dataset tarball and creates a data directory.
-Run Model Training: Executes the PyTorch model script to train the model on the extracted dataset.
-Cleanup: Deletes the data directory after training to reclaim storage space.
-4. HTCondor Submit File
-The HTCondor submit file configures the job submission process and includes:
-
-Singularity Image: Specifies the use of a Singularity container image containing PyTorch.
-Log Files: Defines paths for log, error, and output files.
-Executable and Arguments: Sets the executable (wrapper script) and its arguments.
-File Transfers: Manages the transfer of necessary files (e.g., Python script, dataset) to the compute node.
-Resource Requests: Requests computational resources such as CPUs, GPUs, memory, and disk space.
-Job Execution: Ensures that the job is executed with the specified resources and that all necessary files are available on the compute node.
-
