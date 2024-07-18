@@ -35,6 +35,7 @@ The wrapper script orchestrates the data preparation and model training process.
 
 ## **4. HTCondor Submit File**
 
+
 The HTCondor submit file configures the job submission process and includes:
 
 1. **Singularity Image:** Specifies the use of a Singularity container image containing PyTorch.
@@ -43,3 +44,17 @@ The HTCondor submit file configures the job submission process and includes:
 4. **File Transfers:** Manages the transfer of necessary files (e.g., Python script, dataset) to the compute node.
 5. **Resource Requests:** Requests computational resources such as CPUs, GPUs, memory, and disk space.
 6. **Job Execution:** Ensures that the job is executed with the specified resources and that all necessary files are available on the compute node.
+
+## **5. PyTorch Script**
+
+The PyTorch script (`cifar10_simpleCnn.py`) implements a simple CNN for training on the CIFAR-10 dataset. Below is a description of the script:
+
+### **Description**
+
+The script defines and trains a Convolutional Neural Network (CNN) using PyTorch. The model includes three convolutional layers followed by two fully connected layers. The script handles the following tasks:
+
+1. **Model Definition:** The `SimpleCNN` class defines the network architecture with convolutional and fully connected layers.
+2. **Training Function:** The `train` function performs the training of the model using the provided data loader and optimizer.
+3. **Testing Function:** The `test` function evaluates the model on the test dataset.
+4. **Main Function:** The `main` function parses command-line arguments, sets up data loaders, initializes the model and optimizer, and runs the training and testing processes.
+
